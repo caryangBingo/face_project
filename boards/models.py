@@ -8,7 +8,6 @@ class Board(models.Model):
     description = models.CharField(max_length=100)
 
 
-"""
 class Topic(models.Model):
     subject = models.CharField(max_length=255)
     last_updated = models.DateTimeField(auto_now_add=True)
@@ -23,7 +22,9 @@ class Post(models.Model):
     updated_at = models.DateTimeField(null=True)
     created_by = models.ForeignKey(User, related_name='posts')
     updated_by = models.ForeignKey(User, null=True, related_name='+')
-"""
 
+
+"""
     def __str__(self):
         return self.name
+"""
