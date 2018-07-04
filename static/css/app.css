@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors caryangBingo (you@example.org)
+ * @date    2018-06-27 18:16:51
+ * @version $Id$
+ */
+.navbar-brand{
+    font-family:'Peralta',cursive;
+}
