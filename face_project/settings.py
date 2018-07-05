@@ -11,10 +11,20 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import configparser as cparser
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+file_path = BASE_DIR + "/db_config.ini"
+
+cf = cparser.ConfigParser()
+cf.read(file_path)
+host = cf.get("ip_list", "host3")
+port = cf.get("mysql_config", "port")
+dbname = cf.get("mysql_config", "board_dbname")
+user = cf.get("mysql_config", "user")
+password = cf.get("mysql_config", "password")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -70,7 +80,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'face_project.wsgi.application'
 
-
+"""
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
@@ -78,6 +88,19 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+"""
+# Mysql Database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': host,
+        'PORT': port,
+        'NAME': dbname,
+        'USER': user,
+        'PASSWORD': password,
+        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'", },
     }
 }
 
