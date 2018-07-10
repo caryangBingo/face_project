@@ -25,8 +25,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-ex panded="false">{{ user.username }}</a>
                         <div class="dropdown-menu dropdown-menu-right" ar ia-labelledby="userMenu">
-                            <a class="dropdown-item" href="#">My account</a>
-                            <a class="dropdown-item" href="#">Change password</a>
+                            <a class="dropdown-item" href="#">我的账号</a>
+                            <a class="dropdown-item" href="#">修改密码</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{% url 'logout'%}">Logout</a>
                         </div>
@@ -34,8 +34,8 @@
                 </ul>
                 {% else %}
                 <form class="form-inline ml-auto">
-                    <a href="#" class="btn btn-outline-secondary">Login</a>
-                    <a href="{% url 'signup' %}" class="btn btn-primaryml-2">Sign up</a>
+                    <a href="{% url 'login' %}" class="btn btn-outline-secondary">登录</a>
+                    <a href="{% url 'signup' %}" class="btn btn-primaryml-2">注册</a>
                 </form>
                 {% endif %}
             </div>
