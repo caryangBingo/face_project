@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors caryangBingo (you@example.org)
+ * @date    2018-07-10 11:02:28
+ * @version $Id$
+ */
+body {
+background-image: url(../img/shattered.png);
+}
+.logo {
+font-family: 'Peralta', cursive;
+}
+.logo a {
+color: rgba(0,0,0,.9);
+}
+.logo a:hover,
+.logo a:active {
+text-decoration: none;
+}
