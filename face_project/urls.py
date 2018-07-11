@@ -53,5 +53,6 @@ urlpatterns = [
 
     url(r'^boards/(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
     url(r'^boards/(?P<pk>\d+)/new/$', views.new_topic, name='new_topic'),
+    url(r'^upload_file/$', views.upload_file, name='upload_file'),
     url(r'^admin/', admin.site.urls),
 ]

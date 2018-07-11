@@ -18,6 +18,8 @@ def board_topics(request, pk):
     board = Board.objects.get(pk=pk)
     return render(request, 'topics.html', {'board': board})
 
+def upload_file(request):
+    return render(request, 'upload_file.html')
 
 @login_required
 def new_topic(request, pk):
